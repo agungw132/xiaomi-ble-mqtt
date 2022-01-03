@@ -78,7 +78,8 @@ for device in devices:
                 "temperature": temperature,
                 "humidity": humidity,
                 "battery": int(battery),
-                "average": len(avg)
+                "average": len(avg),
+                "time": datetime.datetime.utcnow().isoformat()
             })
 
         print(datetime.datetime.now(), device, " : ", data)
