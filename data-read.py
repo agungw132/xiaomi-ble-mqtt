@@ -37,7 +37,8 @@ for device in devices:
         data = json.dumps({
             "temperature": temperature,
             "humidity": humidity,
-            "battery": battery
+            "battery": battery,
+            "time": datetime.datetime.utcnow().isoformat()
         })
 
         # Check averages
